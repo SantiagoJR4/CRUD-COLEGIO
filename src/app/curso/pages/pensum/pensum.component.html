@@ -1,0 +1,19 @@
+<div class="container" id="cabecero">
+    <div class="row align-items-start">
+        <h2>DATOS</h2>
+        <hr>
+        <div class="col">ID-PENSUM</div>
+        <div class="col">PERIODO</div>
+        <div class="col"> NOMBRE USUARIO</div>
+        <div class="col">MATERIAS</div>
+    </div>
+</div>
+<div class="container" *ngFor="let dato of datos" id="contenido">
+    <hr>
+    <div class="row align-items-start">
+        <div class="col">{{dato.id}}</div>
+        <div class="col">{{dato.periodo}} </div> 
+        <div class="col">{{dato.usuario.nombres}} </div>
+        <div class="col">{{dato.materia.nombre}} </div> 
+    </div>
+</div>
