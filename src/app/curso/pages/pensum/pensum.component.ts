@@ -14,7 +14,7 @@ export class PensumComponent implements OnInit {
   constructor(private datosService:DatosService) { }
 
   ngOnInit(): void {
-    this.datosService.obtener().subscribe(res=>this.datos=res);
+    this.datosService.obtenerPensum().subscribe(res=>this.datos=res);
   }
 
 }

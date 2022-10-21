@@ -1,8 +1,8 @@
 export interface Pensum {
     id:      number;
     periodo: number;
-    usuario: Usuario;
     materia: Materia;
+    usuario: Usuario;
 }
 
 export interface Materia {
@@ -11,7 +11,11 @@ export interface Materia {
 }
 
 export interface Usuario {
-    id:      number;
-    nombres: string;
-    correo:  string;
+    id:              number;
+    nombres:         string;
+    correo:          string;
+    edad:            number;
+    telefono:        string;
+    fechaNacimiento: Date;
 }
+
