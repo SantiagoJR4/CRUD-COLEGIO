@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import{HttpClientModule} from '@angular/common/http'
 
 import { CursoModule } from './curso/curso.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CursoModule } from './curso/curso.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CursoModule
+    CursoModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

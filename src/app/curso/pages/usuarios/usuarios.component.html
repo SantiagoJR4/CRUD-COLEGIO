@@ -1,22 +1,30 @@
 <div class="container" id="cabecero">
+    <h2>DATOS USUARIO</h2>
     <div class="row align-items-start">
-        <h2>DATOS USUARIO</h2>
-        <hr>
-        <div class="col">ID-USUARIO</div>
-        <div class="col">NOMBRE</div>
-        <div class="col">CORREO</div>
-        <div class="col">EDAD</div>
-        <div class="col">FECHA DE NACIMIENTO</div>
+        <table class="table" id="cabecero">
+            <thead>
+                <tr>
+                    <th>ID-USUARIO</th>
+                    <th>NOMBRE</th>
+                    <th>CORREO</th>
+                    <th>EDAD</th>
+                    <th>FECHA DE NACIMIENTO</th>
+                    <th>EDITAR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dato of datosUsuario" id="contenido">
+                    <td>{{dato.id}}</td>
+                    <td>{{dato.nombres}}</td>
+                    <td>{{dato.correo}}</td>
+                    <td>{{dato.edad}}</td>
+                    <td>{{dato.fechaNacimiento | date:'dd/MM/yyyy'}}</td>
+                    <td>
+                        <button><i class="bi bi-pencil-fill"></i></button>
+                        <button><i class="bi bi-archive-fill"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
-<div class="container" *ngFor="let dato of datosUsuario" id="contenido">
-    <hr>
-    <div class="row align-items-start">
-        <div class="col">{{dato.id}}</div>
-        <div class="col">{{dato.nombres}} </div> 
-        <div class="col">{{dato.correo}} </div>
-        <div class="col">{{dato.edad}} </div>
-        <div class="col">{{dato.fechaNacimiento | date:'dd/MM/yyyy'}}</div> 
-    </div>
-</div>
-
